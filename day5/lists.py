@@ -105,4 +105,59 @@ full_stack.insert(index_of_redux + 2, 'SQL')
 print(full_stack)
 
 
+ages = [19,22,19,24,20,25,26,24,25,24]
+# Sort the list and find the min and max age
+sorted_age= ages.sort()
+print(sorted_age)
+min_age = min(ages)
+print(min_age)
+max_age = max(ages)
+print(max_age)
+# Add the min age and the max age again to the list
+ages.extend([min_age, max_age]) 
+
+# Find the median age
+n = len(ages)
+if n % 2 == 0:
+    median_age = (ages[n // 2 - 1] + ages[n // 2]) / 2
+else:
+    median_age = ages[n // 2] 
+
+# Find the average age
+average_age = sum(ages) / len(ages)
+ # Find the range of ages
+age_range = max_age - min_age
+ 
+# Compare the value of (min - average) and (max - average), use abs() method
+min_average_diff = abs(min_age - average_age)
+max_average_diff = abs(max_age - average_age)
+ 
+
+# Find the middle country(ies) in the countries list
+countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+middle_countries = countries[len(countries) // 2 - 1 : len(countries) // 2 + 1]
+
+# Divide the countries list into two equal lists
+if len(countries) % 2 == 0:
+    first_half = countries[:len(countries) // 2]
+    second_half = countries[len(countries) // 2:]
+else:
+    first_half = countries[:len(countries) // 2 + 1]
+    second_half = countries[len(countries) // 2 + 1:]
+
+# Unpack the first three countries and the rest as scandic countries
+country1, country2, country3, *scandic_countries = countries
+
+print(f"Sorted Ages: {ages}")
+print(f"Min Age: {min_age}, Max Age: {max_age}")
+print(f"Median Age: {median_age}")
+print(f"Average Age: {average_age}")
+print(f"Age Range: {age_range}")
+print(f"Min-Average Difference: {min_average_diff}")
+print(f"Max-Average Difference: {max_average_diff}")
+print(f"Middle Countries: {middle_countries}")
+print(f"First Half: {first_half}")
+print(f"Second Half: {second_half}")
+print(f"First Three Countries: {country1}, {country2}, {country3}")
+print(f"Scandic Countries: {scandic_countries}")
 
