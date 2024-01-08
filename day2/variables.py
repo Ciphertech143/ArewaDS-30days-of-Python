@@ -78,7 +78,7 @@ lastname= input("Enter lastname")
 country= input("Enter the name of your country")
 age=int(input("Enter your age ")) 
 print(firstname)
-print(lastname)
+print(lastname) 
 print(country)
 print(age)
 
